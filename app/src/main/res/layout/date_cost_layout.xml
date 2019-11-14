@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="#F1F8E9"
+                android:layout_width="match_parent"
+                android:layout_height="70dp" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/edit_text_layout"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:text="Date"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="#575656"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_alignParentStart="true"
+                    android:layout_marginStart="13dp" android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/dateText" android:layout_marginTop="5dp" android:layout_marginLeft="13dp"/>
+
+            <TextView
+                    android:text="10 Oct, 2019"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/dateText"
+                    android:layout_marginStart="55dp" android:id="@+id/listItemDate"
+                    android:layout_alignTop="@+id/dateText"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="75dp"/>
+
+            <TextView
+                    android:text="Cost"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:textColor="#575656"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/listItemDate"
+                    android:layout_alignTop="@+id/dateText"
+                    android:layout_marginStart="50dp"
+                    android:id="@+id/costText" android:layout_marginTop="0dp" android:layout_marginLeft="50dp"/>
+
+            <TextView
+                    android:text="1000 rs"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/dateText"
+                    android:layout_toRightOf="@+id/costText"
+                    android:layout_marginStart="10dp" android:id="@+id/listItemCost" android:layout_marginTop="6dp"
+                    android:layout_marginLeft="10dp"/>
+        </RelativeLayout>
+
+</RelativeLayout>

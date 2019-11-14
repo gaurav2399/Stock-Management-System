@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#F1F8E9"
+        android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:background="#F1F8E9"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            tools:context=".activities.SalesEntry">
+
+        <include layout="@layout/toolbar"
+                 android:id="@+id/sales_entry_toolbar"/>
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:completionThreshold="1"
+                android:imeOptions="actionNext"
+                android:digits="qwertzuiopasdfghjklyxcvbnm_- "
+                app:layout_constraintTop_toBottomOf="@+id/sales_entry_toolbar"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/edit_text_layout"
+                android:hint="Item name that you sell"
+                android:id="@+id/itemName"
+                app:layout_constraintStart_toStartOf="@+id/sales_entry_toolbar"
+                app:layout_constraintEnd_toEndOf="@+id/sales_entry_toolbar" tools:layout_editor_absoluteY="116dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#575656"
+                android:text="Sell Date"
+                android:id="@+id/dateText"
+                app:layout_constraintTop_toBottomOf="@+id/itemName"
+                app:layout_constraintStart_toStartOf="@+id/itemName"
+                android:padding="10dp"
+                android:layout_marginTop="35dp"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16 Oct,2019"
+                android:textSize="16sp"
+                android:id="@+id/sellDate"
+                app:layout_constraintStart_toEndOf="@+id/dateText"
+                app:layout_constraintBaseline_toBaselineOf="@+id/dateText"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:layout_marginTop="32dp"/>
+
+        <ImageView android:layout_width="35dp" android:layout_height="35dp"
+                   android:src="@drawable/ic_calendar"
+                   android:padding="5dp"
+                   android:id="@+id/calendar"
+                   android:layout_marginLeft="5dp"
+                   app:layout_constraintStart_toEndOf="@+id/sellDate"
+                   app:layout_constraintTop_toTopOf="@+id/sellDate"
+                   app:layout_constraintBottom_toBottomOf="@+id/sellDate"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="#575656"
+                android:textStyle="bold"
+                android:text="Sell Quantity"
+                android:id="@+id/qtyText"
+                app:layout_constraintTop_toBottomOf="@+id/dateText"
+                app:layout_constraintStart_toStartOf="@+id/dateText"
+                android:padding="10dp"
+                android:layout_marginTop="35dp"/>
+
+        <EditText
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:background="@drawable/edit_text_layout"
+                android:digits="0123456789."
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:completionThreshold="1"
+                android:imeOptions="actionNext"
+                android:ems="10"
+                android:id="@+id/sellQty"
+                app:layout_constraintStart_toEndOf="@+id/qtyText"
+                android:layout_marginLeft="3dp" android:layout_marginStart="3dp"
+                android:layout_alignParentTop="true"
+                app:layout_constraintBaseline_toBaselineOf="@+id/qtyText"/>
+
+        <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sell_qty_spinner"
+                app:layout_constraintStart_toEndOf="@+id/sellQty"
+                android:layout_marginLeft="3dp" android:layout_marginStart="3dp"
+                app:layout_constraintTop_toTopOf="@+id/sellQty"
+                app:layout_constraintBottom_toBottomOf="@+id/purchaseQty"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#575656"
+                android:text="Sell Price"
+                android:id="@+id/priceText"
+                app:layout_constraintTop_toBottomOf="@+id/qtyText"
+                app:layout_constraintStart_toStartOf="@+id/qtyText"
+                android:padding="10dp"
+                android:layout_marginTop="32dp"/>
+
+        <EditText
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:background="@drawable/edit_text_layout"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:completionThreshold="1"
+                android:imeOptions="actionDone"
+                android:ems="10"
+                android:id="@+id/sellPrice"
+                android:digits="0123456789."
+                app:layout_constraintStart_toEndOf="@+id/priceText"
+                android:layout_marginLeft="3dp" android:layout_marginStart="3dp"
+                android:layout_alignParentTop="true"
+                app:layout_constraintBaseline_toBaselineOf="@+id/priceText"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="rupees"
+                android:id="@+id/text"
+                app:layout_constraintTop_toTopOf="@+id/sellPrice"
+                app:layout_constraintBottom_toBottomOf="@+id/sellPrice"
+                app:layout_constraintStart_toEndOf="@+id/sellPrice"
+                android:padding="10dp"/>
+
+        <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Save"
+                app:layout_constraintTop_toBottomOf="@+id/priceText"
+                android:background="@drawable/inside_btn_layout"
+                android:layout_marginTop="35dp"
+                android:textAllCaps="false"
+                android:id="@+id/sellEntrySave"
+                android:padding="5dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/setPassword"
+          android:visible="true"
+          android:title="Set Password"/>
+    <item android:id="@+id/removePassword"
+          android:visible="false"
+          android:title="Remove Password"/>
+    <item android:id="@+id/changePassword"
+          android:visible="false"
+          android:title="Change Password"/>
+    <item android:id="@+id/alert"
+          android:title="Alert"
+          android:iconTint="#fff"
+          android:icon="@drawable/ic_notifications_bell_button"
+          app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="8dp"
+        android:background="#F1F8E9"
+        android:layout_height="127dp" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:orientation="vertical"
+                        android:background="@drawable/edit_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <TextView
+                    android:text="Item Name"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#575656"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content" android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp" android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true" android:id="@+id/nameText" android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_alignParentTop="true" android:id="@+id/detailItemName" android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@+id/nameText"
+                    android:layout_toRightOf="@+id/nameText" android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"/>
+            <TextView
+                    android:text="Cost"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="#575656"
+                    android:layout_height="wrap_content" android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp" android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/nameText"
+                    android:id="@+id/costText" android:layout_marginTop="50dp" android:layout_marginLeft="10dp"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailItemCost"
+                    android:layout_alignTop="@+id/nameText"
+                    android:padding="5dp"
+                    android:textSize="14sp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/costText" android:layout_toRightOf="@+id/costText"
+                    android:layout_marginLeft="5dp" android:layout_marginStart="5dp" />
+            <TextView
+                    android:text="Quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:padding="5dp"
+                    android:layout_alignTop="@+id/nameText"
+                    android:textSize="16sp"
+                    android:textColor="#575656"
+                    android:id="@+id/quantityText" android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/costText" android:layout_toRightOf="@+id/costText"
+                    android:layout_marginLeft="100dp" android:layout_marginStart="100dp"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:padding="5dp"
+                    android:layout_alignTop="@+id/nameText"
+                    android:id="@+id/detailItemQty" android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/quantityText" android:layout_toRightOf="@+id/quantityText"
+                    android:layout_marginLeft="5dp" android:layout_marginStart="5dp"/>
+        </RelativeLayout>
+
+</RelativeLayout>
